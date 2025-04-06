@@ -2,12 +2,13 @@
 #include<string>
 using namespace std;
 
-void reverstring(char ch[],int n){
+string reverstring(char ch[],int n){
     int s = 0;
     int e = n-1;
     while(s<=e){
         swap(ch[s++],ch[e--]);
-    }
+    }  
+    return ch;
 }
 int getlength(char ch[]){
     int count = 0;
@@ -24,7 +25,7 @@ int main(){
     cout<<"Length of name:"<<getlength(ch)<<endl;
     int len = getlength(ch);
     cout<<"Reverse of the string:";
-    reverstring(ch,len);
+    cout<<reverstring(ch,len);
 
     return 0;
 }
